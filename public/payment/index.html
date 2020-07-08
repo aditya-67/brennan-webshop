@@ -242,12 +242,31 @@
 
         </div>
       </div>
+      <div id="maesh">
+
+      </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="main.js"></script>
+  <script src="https://js.maesh.io/v1.js">
+  </script>
+  <script>
+
+    const maesh = Maesh();
+ 
+    maesh.create({ 
+      api_key : "8f71354be2234ad7839ad140670d6acb5e4a3b4d", 
+      dom_element_id : "maesh",
+      currency: "SGD",
+      amount:  21700,
+      gotoUrl: "https://brennan-webshop.netlify.app/redirect/",
+      referenceCode:"ABCDEFGH"
+    });
+
+  </script>
 </body>
 
 </html>
