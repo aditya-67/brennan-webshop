@@ -199,7 +199,7 @@
 
             <h1 class="card__msg">Order Confirmed!</h1>
             <h2 class="card__submsg">Thank you for your transfer</h2>
-            <h2 class="card__submsg">Status of Transaction: </h2>
+            <h2 class="card__submsg">Status of Transaction: <span id="result"></span> </h2>
 
             <div class="card__tags">
                 <span class="card__tag">completed</span>
@@ -220,5 +220,15 @@
 
     </div>
 </body>
-
+<script src="https://js.maesh.io/v1.js">
+</script>
+<script>
+    const maesh = Maesh();
+    const maeshStatus = maesh.callback();
+    // Resolve promise to get status
+    maeshstatus.then(
+        status => { 
+            document.getElementById('result').innerHTML = status 
+        });
+</script>
 </html>
